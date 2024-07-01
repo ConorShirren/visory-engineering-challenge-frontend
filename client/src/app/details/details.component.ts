@@ -18,7 +18,14 @@ import { EventService } from '../event.service';
       <section class="listing-features">
         <h2 class="section-heading">About this event location</h2>
         <ul>
-          <li>Location: {{ event?.location }}</li>
+          <li>Location: Australia</li>
+          <li>{{ event?.url }}</li>
+          <li>{{ event?.id }}</li>
+          <li>{{ event?.dates?.start?.localDate }}</li>
+          <li>{{ event?.dates?.start?.localTime }}</li>
+          <li>{{ event?.dates?.status?.code }}</li>
+          <li>{{ event?.dates?.timezone }}</li>
+          <li>{{ event?.classification }}</li>
         </ul>
       </section>
     </article>

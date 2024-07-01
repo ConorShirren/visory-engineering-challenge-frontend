@@ -1,24 +1,19 @@
 export interface Event {
-  id: number;
+  id: string;
   name: string;
-  location: string;
-  type: string;
+  // location: string;
+  classification: string;
   url: string;
-  dates?: Dates;
+  dates: Dates;
 }
 
 interface Dates {
   start: {
-    localDate: string;
-    localTime: string;
-  };
-  end: {
-    localDate: string;
-    localTime: string;
+    localDate?: string;
+    localTime?: string;
   };
   timezone: string;
   status: {
     code: string;
   };
-  spanMultipleDays: string;
 }
