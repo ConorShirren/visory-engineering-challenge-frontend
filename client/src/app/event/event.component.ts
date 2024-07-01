@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
     <section class="listing">
       <h2 class="listing-heading">{{ event.name }}</h2>
       <p>Australia</p>
-      <p><a href="{{ event.url }}">Link Here</a></p>
+      <p><a href="{{ event.url }}" target="_blank">Link Here</a></p>
       <p>{{ event.id }}</p>
       <p>{{ event.dates.start.localDate }}</p>
       <p>{{ event.dates.start.localTime }}</p>

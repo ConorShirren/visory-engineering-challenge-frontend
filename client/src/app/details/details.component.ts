@@ -37,22 +37,8 @@ export class DetailsComponent {
   eventService = inject(EventService);
   event: Event | undefined;
 
-  applyForm = new FormGroup({
-    firstName: new FormControl(''),
-    lastName: new FormControl(''),
-    email: new FormControl(''),
-  });
-
   constructor() {
     const eventId = this.route.snapshot.params['id'];
     this.event = this.eventService.getEventById(eventId);
   }
-
-  // submitApplication() {
-  //   this.eventService.submitApplication(
-  //     this.applyForm.value.firstName ?? '',
-  //     this.applyForm.value.lastName ?? '',
-  //     this.applyForm.value.email ?? ''
-  //   );
-  // }
 }
