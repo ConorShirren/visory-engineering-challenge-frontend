@@ -44,7 +44,7 @@ export class DetailsComponent {
   });
 
   constructor() {
-    const eventId = parseInt(this.route.snapshot.params['id'], 10);
+    const eventId = this.route.snapshot.params['id'];
     this.event = this.eventService.getEventById(eventId);
   }
 

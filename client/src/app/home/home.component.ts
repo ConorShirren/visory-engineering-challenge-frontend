@@ -44,7 +44,7 @@ export class HomeComponent {
     }
 
     this.filteredLocationList = this.eventList.filter((event) =>
-      event?.type.toLowerCase().includes(text.toLowerCase())
+      event?.classification.toLowerCase().includes(text.toLowerCase())
     );
   }
 }
