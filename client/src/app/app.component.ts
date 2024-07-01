@@ -9,7 +9,6 @@ import { HomeComponent } from './home/home.component';
   imports: [HomeComponent, RouterLink, RouterOutlet],
   template: `
     <main>
-      <a [routerLink]="['/']"> Home Button </a>
       <section class="content">
         <router-outlet></router-outlet>
       </section>

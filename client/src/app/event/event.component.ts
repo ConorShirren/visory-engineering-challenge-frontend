@@ -9,17 +9,15 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterModule],
   template: `
-    <section class="listing">
-      <h2 class="listing-heading">{{ event.name }}</h2>
-      <p>Australia</p>
-      <p><a href="{{ event.url }}" target="_blank">Link Here</a></p>
-      <p>{{ event.id }}</p>
-      <p>{{ event.dates.start.localDate }}</p>
-      <p>{{ event.dates.start.localTime }}</p>
-      <p>{{ event.dates.status.code }}</p>
-      <p>{{ event.dates.timezone }}</p>
-      <p>{{ event.classification }}</p>
-      <a [routerLink]="['/details', event.id]">Learn More</a>
+    <section class="event">
+      <h2 class="event-heading">{{ event.name }}</h2>
+      <p class="event-details">Event ID: {{ event.id }}</p>
+      <p class="event-details">Start Date: {{ event.dates.start.localDate }}</p>
+      <p class="event-details">Start Time: {{ event.dates.start.localTime }}</p>
+      <p class="event-details">Sale Status: {{ event.dates.status.code }}</p>
+      <p class="event-details">Timezone: {{ event.dates.timezone }}</p>
+      <p class="event-details">Type: {{ event.classification }}</p>
+      <a href="{{ event.url }}" target="_blank">Learn More at Ticketmaster</a>
     </section>
   `,
   styleUrls: ['./event.component.css'],
