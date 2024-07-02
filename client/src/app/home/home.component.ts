@@ -28,7 +28,10 @@ import { countryCodes } from '../types/utils/countryCodes';
         <button class="primary" type="button" (click)="search()">Search</button>
       </form>
     </section>
-    <section class="results">
+    <section *ngIf="loading" class="results">
+      <div>Loading...</div>
+    </section>
+    <section *ngIf="!loading" class="results">
       <div *ngIf="events === null">No events returned</div>
       <app-event *ngFor="let event of events" [event]="event"> </app-event>
     </section>
@@ -44,6 +47,7 @@ export class HomeComponent {
   startDate: string;
   endDate: string;
   location: string;
+  loading: boolean = false;
   countryCodes: any[] = countryCodes;
 
   constructor() {
@@ -81,15 +85,18 @@ export class HomeComponent {
   }
 
   loadEvents(): void {
+    this.loading = true;
     this.eventService
       .getEvents(this.location, this.startDate, this.endDate)
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe({
         next: (events: Event[]) => {
           this.events = events;
+          this.loading = false;
         },
         error: (error) => {
           console.error('Error fetching events', error);
+          this.loading = false;
         },
       });
   }
