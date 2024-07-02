@@ -1,10 +1,10 @@
 export interface Event {
   id: string;
   name: string;
-  // location: string;
   classification: string;
   url: string;
   dates: Dates;
+  venue: string;
 }
 
 interface Dates {

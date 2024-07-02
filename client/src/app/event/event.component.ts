@@ -14,6 +14,7 @@ import { RouterModule } from '@angular/router';
       <p class="event-details">Event ID: {{ event.id }}</p>
       <p class="event-details">Start Date: {{ event.dates.start.localDate }}</p>
       <p class="event-details">Start Time: {{ event.dates.start.localTime }}</p>
+      <p class="event-details">Venue: {{ event.venue }}</p>
       <p class="event-details">Sale Status: {{ event.dates.status.code }}</p>
       <p class="event-details">Timezone: {{ event.dates.timezone }}</p>
       <p class="event-details">Type: {{ event.classification }}</p>
