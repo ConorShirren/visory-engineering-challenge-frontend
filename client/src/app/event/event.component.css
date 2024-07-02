@@ -1,0 +1,23 @@
+.event {
+  background: var(--accent-color);
+  border-radius: 30px;
+  padding-bottom: 30px;
+}
+.event-heading {
+  color: var(--primary-color);
+  padding: 10px 20px 0 20px;
+}
+
+.event-details {
+  padding: 10px 5px 5px 20px;
+}
+
+section.event a {
+  padding-left: 20px;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+section.event a::after {
+  content: "\203A";
+  margin-left: 5px;
+}
